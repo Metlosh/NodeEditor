@@ -45,17 +45,39 @@ NodeEditorData.predefinedTypesJson = {
             "inputItem": [
                 {
                     "name": "vstup_1",
-                    "dataType": "int"
+                    "dataType": "float"
+                },
+                {
+                    "name": "vstup_2",
+                    "dataType": "float"
                 }
             ],
             "outputItem": [
                 {
                     "name": "vystup_1",
-                    "dataType": "int",
+                    "dataType": "float",
+                    "func": function (args) { return args.vstup_1 + args.vstup_2; }
+                }
+            ]
+        },
+        {
+            "name": "test_4",
+            "color": "#03C03C",
+            "contentItem": [
+                {
+                    "name": "vstup_1",
+                    "dataType": "float"
+                }
+            ],
+            "outputItem": [
+                {
+                    "name": "vystup_1",
+                    "dataType": "float",
                     "func": function (args) { return args.vstup_1 }
                 }
             ]
+            
         }
-
+        
     ]
 }
