@@ -1061,12 +1061,14 @@ var NodeEditor = function ()
 
     var ControlDataType = function (inputItem, outputItem)
     {
-        if ((inputItem.dataType == "int" && (outputItem.dataType == "int" || outputItem.dataType == "boolean")) ||
-           (inputItem.dataType == "float" && (outputItem.datatype == "float" || outputItem.dataType == "int" || outputItem.dataType == "boolean")) ||
-           (inputItem.datatype == "boolean" && outputItem.dataType == "boolean") ||
-           (inputItem.dataType == "string") ||
-           (inputItem.dataType == "image" && outputItem.dataType == "image") ||
-           (inputItem.dataType == "color" && outputItem.dataType == "color")) return true;
+        if (
+                (inputItem.dataType == "int" && (outputItem.dataType == "int" || outputItem.dataType == "boolean")) ||
+                (inputItem.dataType == "float" && (outputItem.dataType == "float" || outputItem.dataType == "int" || outputItem.dataType == "boolean")) ||
+                (inputItem.datatype == "boolean" && outputItem.dataType == "boolean") ||
+                (inputItem.dataType == "string") ||
+                (inputItem.dataType == "image" && outputItem.dataType == "image") ||
+                (inputItem.dataType == "color" && outputItem.dataType == "color")
+          ) return true;
         else return false;
     }
 
