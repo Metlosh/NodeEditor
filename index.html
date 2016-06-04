@@ -1,0 +1,43 @@
+﻿<!doctype html>
+<!-- saved from url=(0016)http://localhost -->
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>NodeEditor</title>
+    <link href="Styles/styles.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/editor_styles.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" language="javascript" src="Scripts/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" language="javascript" src="Scripts/jqColorPicker.min.js"></script>
+    <script type="text/javascript" language="javascript" src="Scripts/editor.js"></script>
+    <script type="text/javascript" language="javascript" src="Scripts/editor_utils.js"></script>
+    <script type="text/javascript" language="javascript" src="Scripts/editor_node.js"></script>
+    <script type="text/javascript" language="javascript" src="Scripts/editor_node_contentItem.js"></script>
+    <script type="text/javascript" language="javascript" src="Scripts/editor_node_connection.js"></script>
+    <script type="text/javascript" language="javascript" src="Scripts/editor_node_group.js"></script>
+    <script type="text/javascript" language="javascript" src="Scripts/editor_file_saver.js"></script>
+    <script type="text/javascript" language="javascript" src="Scripts/jsonfn.js"></script>
+    <script type="text/javascript" language="javascript" src="Data/editor_data.js"></script>
+</head>
+<body>
+    <div id="editorCont"></div>
+    <div id="debugLog" style="position: absolute; right: 0px; top: 0px; border: 2px solid green; background-color: yellow" >Test&#160;&#160;<button id='testingButton' onclick='RunTest();'>Spustit</button></div>
+    <script type="text/javascript" language="javascript">
+        var ed;
+        
+        $(function ()
+        {
+            ed = new NodeEditor();
+            ed.Create({ elemid: "editorCont", mode: "developer" });
+
+            //ed.PrepExperiment(501);
+        });
+
+        function RunTest()
+        {
+            ed.Experiment(10);
+        }
+    </script>
+</body>
+</html>
+
